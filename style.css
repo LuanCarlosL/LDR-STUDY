@@ -1,0 +1,32 @@
+/* Define a fonte Inter como padrão para o corpo do documento */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos personalizados para os cards de estatísticas */
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Efeito de levantar o card ao passar o mouse */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra mais pronunciada */
+}
+
+/* Estilos personalizados para os ícones dos cursos */
+.course-icon {
+    transition: transform 0.3s ease;
+}
+
+.course-icon:hover {
+    transform: scale(1.1); /* Efeito de aumentar o ícone ao passar o mouse */
+}
+
+/* Você pode adicionar mais estilos personalizados aqui conforme necessário */
+
+/* Exemplo de um gradiente que estava no rascunho, caso queira usar em algum lugar */
+/*
+.hero-bg-gradient {
+    background: linear-gradient(to right, #f0f4f8, #e0e8f0);
+}
+*/
