@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu curso</title>
+    <link rel="stylesheet" href="/static/styles-curso.css"> </head>
+    <script src="script.js"></script> 
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="/static/imgs/Logo.svg" alt="Logo" class="course-icon">Escolha seu curso</h1>
+        </header>
+        <section>
+            <div class="courses-grid">
+                <div class="course-card" onclick="selectCourse('python')">
+                    <div class="course-header python">
+                        <h2><img src="/static/imgs/Python.svg" alt="Python Logo imagem" class="course-icon">Python</h2>
+                    </div>
+                    <div class="course-content">
+                        <p>A linguagem mais versátil do mercado, usada em web, IA, dados e mais.</p>
+                        <button class="btn python">Saiba mais</button>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="selectCourse('ia')">
+                    <div class="course-header ia">
+                        <h2><img src="/static/imgs/IA.svg" alt="IA imagem" class="course-icon">IA</h2>
+                    </div>
+                    <div class="course-content">
+                        <p>Crie modelos de IA, chatbots, redes neurais e sistemas preditivos.</p>
+                        <button class="btn ia">Saiba mais</button>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="selectCourse('cpp')">
+                    <div class="course-header cpp">
+                        <h2><img src="/static/imgs/C++.svg" alt="C++ imagem" class="course-icon">C++</h2>
+                    </div>
+                    <div class="course-content">
+                        <p>Base sólida para quem quer alto desempenho, games ou sistemas embarcados.</p>
+                        <button class="btn cpp">Saiba mais</button>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="selectCourse('frontend')">
+                    <div class="course-header frontend">
+                        <h2><img src="/static/imgs/Front End.svg" alt="frontend imagem" class="course-icon">Front End</h2>
+                    </div>
+                    <div class="course-content">
+                        <p>Aprenda a criar interfaces modernas, acessíveis e responsivas.</p>
+                        <button class="btn frontend">Saiba mais</button>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="selectCourse('redes')">
+                    <div class="course-header redes">
+                        <h2><img src="/static/imgs/Redes de Computadores.svg" alt="Redes de computadores imagem" class="course-icon">Redes</h2>
+                    </div>
+                    <div class="course-content">
+                        <p>Domine protocolos, segurança, infraestrutura e conectividade.</p>
+                        <button class="btn redes">Saiba mais</button>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="selectCourse('backend')">
+                    <div class="course-header backend">
+                        <h2><img src="/static/imgs/Back End.svg" alt="Backend imagem" class="course-icon">Back End</h2>
+                    </div>
+                    <div class="course-content">
+                        <p>Construa servidores, APIs e sistemas robustos com segurança.</p>
+                        <button class="btn backend">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

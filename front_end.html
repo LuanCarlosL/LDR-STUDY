@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDR STUDY - Front End</title>
+    <link rel="stylesheet" href="/static/styels-watching.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-container">
+                <h1 class="logo"> <img src="/static/imgs/Logo.svg" alt="Logo" class="course-icon">LDR STUDY</h1>
+        </header>
+
+        <main>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="video-player" style="aspect-ratio: 16/9; background-color: #000;">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://www.youtube.com/embed/n_Etdr7Dbjs" 
+                            title="YouTube video player - Aula 1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe> 
+                    </div>
+                    
+                    <div class="video-controls">
+                        <div class="module-info">
+                            <span class="current-module">Módulo 1 - Primeiro Contato</span>
+                            <span class="lesson-title">Aula 1</span>
+                        </div>
+                        <div class="controls">
+                            <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                            <button class="control-btn"><i class="fas fa-play"></i></button>
+                            <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+                            <div class="time-indicator">00:00 / 15:30</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="navigation-container">
+                    <button class="nav-btn" id="prev-btn">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <span class="module-number">1</span>
+                    <button class="nav-btn" id="next-btn">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="lessons-container">
+                    <h3 class="course-title">Front End</h3>
+                    
+                    <div class="lesson-card active">
+                        <div class="lesson-header">
+                            <h4>Aula 1</h4>
+                            <i class="fas fa-check-circle completed-icon"></i>
+                        </div>
+                        <div class="lesson-divider"></div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <h4>Aula 2</h4>
+                            <i class="far fa-check-circle incomplete-icon"></i>
+                        </div>
+                        <div class="lesson-divider"></div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <h4>Projeto 1</h4>
+                            <i class="far fa-check-circle incomplete-icon"></i>
+                        </div>
+                        <div class="lesson-divider"></div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <h4>Aula 3</h4>
+                            <i class="far fa-check-circle incomplete-icon"></i>
+                        </div>
+                        <div class="lesson-divider"></div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <h4>Aula 4</h4>
+                            <i class="far fa-check-circle incomplete-icon"></i>
+                        </div>
+                        <div class="lesson-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/script-video.js"></script>
+</body>
+</html>

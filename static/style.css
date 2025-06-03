@@ -22,11 +22,33 @@ body {
     transform: scale(1.1); /* Efeito de aumentar o ícone ao passar o mouse */
 }
 
-/* Você pode adicionar mais estilos personalizados aqui conforme necessário */
-
-/* Exemplo de um gradiente que estava no rascunho, caso queira usar em algum lugar */
-/*
-.hero-bg-gradient {
-    background: linear-gradient(to right, #f0f4f8, #e0e8f0);
+.custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #d1d5db; /* gray-300 */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.125em;
 }
-*/
+.custom-radio:checked {
+    background-color: #6d28d9; /* purple-700 */
+    border-color: #6d28d9; /* purple-700 */
+}
+.custom-radio:checked::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
