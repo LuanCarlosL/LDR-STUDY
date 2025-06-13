@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Curso - LDR STUDY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/curso-etapa1.css" />
+</head>
+<body>
+  <header>
+    <img src="/static/imgs/Logo.svg" alt="Logo LDR STUDY" class="logo" />
+    <div class="perfil">
+      <img src="foto.jpg" alt="Foto de Perfil" />
+      <span>Fulana de Tal</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Cadastro de Curso</h2>
+    
+    <form id="form-curso">
+      <!-- Campo Título -->
+      <div class="form-group">
+        <label for="titulo">Título do Curso</label>
+        <input type="text" id="titulo" required />
+      </div>
+
+      <!-- Linha Área + Nível -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="area">Área do Conhecimento</label>
+          <select id="area" required>
+            <option value="">Selecione uma área</option>
+            <option>Front-end</option>
+            <option>Back-end</option>
+            <option>Banco de Dados</option>
+            <option>DevOps</option>
+            <option>UX/UI</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nivel">Nível</label>
+          <select id="nivel" required>
+            <option value="">Selecione o nível</option>
+            <option>Básico</option>
+            <option>Intermediário</option>
+            <option>Avançado</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Linha Duração + Capa -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="duracao">Duração (horas)</label>
+          <input type="number" id="duracao" min="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="capa">Capa do Curso (Opcional)</label>
+          <input type="file" id="capa" accept="image/*" />
+        </div>
+      </div>
+
+      <!-- Campo Descrição -->
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" rows="4" required></textarea>
+      </div>
+
+      <!-- Botões -->
+      <div class="btn-group">
+        <button type="submit" class="btn">Avançar</button>
+        <button type="reset" class="btn btn-secondary">Limpar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/static/js/curso-etapa1.js"></script>
+</body>
+</html>

@@ -24,58 +24,45 @@ function selectCourse(courseIdentifier) {
     const friendlyCourseName = getCourseName(courseIdentifier);
     alert(`Você selecionou o curso de ${friendlyCourseName}. Redirecionando...`);
 
-    // ----- ATENÇÃO: PERSONALIZE A LÓGICA DE URL ABAIXO -----
-    // Ajuste esta seção para que os nomes dos arquivos HTML correspondam aos seus.
-    let pageUrl;
-    const courseFileMapping = {
-        'python': 'python_details.html', // Exemplo: substitua pelo nome real
-        'ia': 'artificial_intelligence_course.html', // Exemplo
-        'cpp': 'cpp_programming.html', // Exemplo
-        'frontend': 'front_end.html', // Verifique se 'front_end.html' é o nome correto
-        'redes': 'computer_networks.html', // Exemplo
-        'backend': 'backend_services.html' // Exemplo
+    // Usar as rotas do Flask através de URLs pré-definidas
+    const courseUrls = {
+        'python': '/python_details',
+        'ia': '/artificial_intelligence',
+        'cpp': '/cpp_programming',
+        'frontend': '/front_end',
+        'redes': '/computer_networks',
+        'backend': '/backend_services'
     };
 
-    if (courseFileMapping[courseIdentifier]) {
-        pageUrl = courseFileMapping[courseIdentifier];
+    if (courseUrls[courseIdentifier]) {
+        window.location.href = courseUrls[courseIdentifier];
     } else {
-        console.error('ERRO CRÍTICO: URL não mapeada para o curso:', courseIdentifier, 'no objeto courseFileMapping.');
-        alert('Desculpe, a página para este curso não foi encontrada. Verifique a configuração no arquivo script.js (courseFileMapping).');
-        return;
+        console.error('ERRO CRÍTICO: URL não mapeada para o curso:', courseIdentifier);
+        alert('Desculpe, a página para este curso não foi encontrada.');
     }
-    // ----- FIM DA SEÇÃO DE PERSONALIZAÇÃO DE URL -----
-
-    console.log(`Redirecionamento para o curso: "${friendlyCourseName}", Identificador: "${courseIdentifier}", URL Gerada: "${pageUrl}"`);
-    window.location.href = pageUrl;
 }
-
 // Este listener executa o código quando o HTML da página estiver completamente carregado.
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Lógica de Login (para index.html)
-    const loginForm = document.getElementById('loginForm');
-    if (loginForm) { // Verifica se o formulário de login existe na página atual
-        const emailInput = document.getElementById('email-input');
-        const passwordInput = document.getElementById('password-input');
-        const errorMessageElement = document.getElementById('error-message');
-        const FAKE_EMAIL = "LDRSTUDY@gmail.com";
-        const FAKE_PASSWORD = "12345678";
+// Lógica de Login (para index.html)
+    // const loginForm = document.getElementById('loginForm');
+    // if (loginForm) {
+    //     const emailInput = document.getElementById('email-input');
+    //     const passwordInput = document.getElementById('password-input');
+    //     const errorMessageElement = document.getElementById('error-message');
 
-        loginForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const email = emailInput.value.trim();
-            const password = passwordInput.value.trim();
-
-            if (email === FAKE_EMAIL && password === FAKE_PASSWORD) {
-                errorMessageElement.textContent = "";
-                // Redireciona para a página de cursos após o login
-                window.location.href = 'cursos.html';
-            } else {
-                errorMessageElement.textContent = "Email ou senha inválidos.";
-                if(passwordInput) passwordInput.value = "";
-            }
-        });
-    }
+    //     loginForm.addEventListener('submit', function(event) {
+    //         // Limpa mensagens de erro anteriores
+    //         errorMessageElement.textContent = "";
+            
+    //         // Validação básica do cliente
+    //         if (!emailInput.value.trim() || !passwordInput.value.trim()) {
+    //             event.preventDefault();
+    //             errorMessageElement.textContent = "Por favor, preencha todos os campos.";
+    //         }
+    //         // Se estiver tudo ok, o formulário será enviado normalmente para o Flask
+    //     });
+    // }
 
     // Lógica da Seção de Pagamento (para index.html)
     const paymentRadios = document.querySelectorAll('input[name="payment-method"]');
@@ -84,6 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const paymentCardRadio = document.getElementById('payment-card');
     const paymentBoletoRadio = document.getElementById('payment-boleto');
     const paymentPaypalRadio = document.getElementById('payment-paypal');
+    const btnCadastro = document.getElementById("btn-cadastro");
+    if (btnCadastro) {
+        btnCadastro.addEventListener("click", function () {
+            window.location.href = "/cadastro";
+        });
+    }
 
     function updateMainPayButtonText() {
         if (!mainPayButton) return;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montagem do Curso - LDR STUDY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/curso-etapa2.css" />
+</head>
+<body>
+  <header>
+    <img src="/static/imgs/Logo.svg" alt="Logo LDR STUDY" class="logo" />
+    <div class="perfil">
+      <img src="foto.jpg" alt="Foto de Perfil" />
+      <span>Fulana de Tal</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Montagem do Curso</h2>
+
+    <!-- Resumo do Curso -->
+    <div id="resumo-curso">
+      <div class="info-item"><strong>Título:</strong> <span id="resumo-titulo"></span></div>
+      <div class="info-item"><strong>Área:</strong> <span id="resumo-area"></span></div>
+      <div class="info-item"><strong>Nível:</strong> <span id="resumo-nivel"></span></div>
+      <div class="info-item"><strong>Duração:</strong> <span id="resumo-duracao"></span></div>
+      <div class="info-item"><strong>Descrição:</strong> <span id="resumo-descricao"></span></div>
+    </div>
+
+    <!-- Container de Módulos -->
+    <div id="modulos-container">
+      <!-- Módulos serão adicionados dinamicamente via JavaScript -->
+    </div>
+
+    <!-- Botões de Ação -->
+    <div class="btn-group">
+      <a href="/templates/curso-etapa1.html" class="btn-voltar">← Voltar</a>
+      <div>
+        <button id="add-modulo-btn" class="btn btn-secondary">+ Novo Módulo</button>
+        <button id="salvar-curso-btn" class="btn">Salvar Curso</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/curso-etapa2.js"></script>
+</body>
+</html>

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolha seu curso</title>
-    <link rel="stylesheet" href="/static/styles-curso.css"> </head>
-    <script src="script.js"></script> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles-curso.css') }}">
 <body>
     <div class="container">
         <header>
@@ -76,6 +75,6 @@
         </section>
         </div>
 
-    <script src="script.js"></script> 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

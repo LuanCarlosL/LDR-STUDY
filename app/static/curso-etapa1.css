@@ -1,0 +1,157 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 40px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+}
+
+.perfil img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Container da linha */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* Permite quebra em telas pequenas */
+}
+
+/* Campos individuais */
+.form-row .form-group {
+  flex: 1;
+  min-width: calc(50% - 15px); /* Divide o espaço igualmente */
+  box-sizing: border-box;
+}
+
+/* Ajuste específico para mobile */
+@media (max-width: 600px) {
+  .form-row .form-group {
+    min-width: 100%; /* Empilha em telas pequenas */
+  }
+  
+  /* Ajuste para campos de arquivo */
+  input[type="file"] {
+    padding: 8px 0;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: border 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  flex: 1;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Correção para campos específicos */
+#duracao, #capa {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box; /* Garante que padding não altere a largura */
+}
+
+/* Estilo customizado para o input de arquivo */
+input[type="file"]::-webkit-file-upload-button {
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
